@@ -16,8 +16,8 @@ var commentsRoutes = require("./routes/comments");
 var travelnoteRoutes = require("./routes/travelnotes");
 var indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/deploy");
-// mongoose.connect("mongodb://yywwd:102514.-wwd@ds225078.mlab.com:25078/travelnote");
+// mongoose.connect("mongodb://localhost/deploy");
+mongoose.connect("mongodb://yywwd:102514.-wwd@ds225078.mlab.com:25078/travelnote");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
