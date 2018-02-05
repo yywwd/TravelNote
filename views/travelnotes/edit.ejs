@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <h1 style="text-align: center">Edit <%= travelnote.name %></h1>
+    <div style="width: 30%; margin: 25px auto;">
+        <form action="/travelnotes/<%= travelnote._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="name" id="name" value="<%= travelnote.name %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="location" id="location" value="<%= travelnote.location %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="number" name="price" id="price" value="<%= travelnote.price %>" min="0.01" step="0.01">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="image" id="image" value="<%= travelnote.image %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="description" id="description" value="<%= travelnote.description %>">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit</button>
+            </div>
+        </form>
+        <a href="/travelnotes">Go Back</a>
+    </div>
+</div>
+
+<% include ../partials/footer %>
