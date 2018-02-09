@@ -1,4 +1,3 @@
-
 var middlewareObj = {};
 var Travelnote = require("../models/travelnote");
 var Comment = require("../models/comment");
